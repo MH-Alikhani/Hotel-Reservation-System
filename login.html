@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحه ورود</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <script src="js/login.js" defer></script>
+  </head>
+  <body>
+    <main class="login-container">
+      <section
+        class="login-form"
+        id="loginForm"
+        role="form"
+        aria-labelledby="loginFormTitle"
+      >
+        <h1 id="loginFormTitle">ورود</h1>
+
+        <div class="form-group">
+          <label for="username">نام کاربری</label>
+          <input
+            required
+            type="text"
+            id="username"
+            name="username"
+            aria-label="نام کاربری"
+            autocomplete="off"
+            placeholder="نام کاربری خود را وارد کنید"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">رمز عبور</label>
+          <input
+            required
+            type="password"
+            id="password"
+            name="password"
+            aria-label="رمز عبور"
+            autocomplete="off"
+            placeholder="رمز عبور خود را وارد کنید"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="submit-button"
+          aria-label="ورود"
+          onclick="login()"
+        >
+          ورود
+        </button>
+
+        <p id="errorMessage" class="error-message" aria-live="assertive"></p>
+      </section>
+    </main>
+  </body>
+</html>

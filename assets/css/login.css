@@ -1,0 +1,103 @@
+:root {
+  --font-size-base: 62.5%;
+  --font-family-base: "Arial", sans-serif;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #4caf50;
+  --color-secondary: #ff9800;
+  --color-error: #f44336;
+  --transition-duration: 200ms;
+  --border-radius: 0.5rem;
+  --input-height: 3rem;
+  --button-bg-color: var(--color-primary);
+  --button-hover-scale: 1.05;
+  --font-size-h1: 3rem;
+  --font-size-input: 1.8rem;
+  --font-size-label: 1.6rem;
+  --font-size-button: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-family: var(--font-family-base);
+}
+
+.login-container {
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+
+.form-group label {
+  font-size: var(--font-size-label);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  height: var(--input-height);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  padding: 0 1rem;
+  font-size: var(--font-size-input);
+  transition: all var(--transition-duration);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+}
+
+.submit-button {
+  background-color: var(--button-bg-color);
+  color: var(--color-white);
+  width: 100%;
+  height: var(--input-height);
+  font-size: var(--font-size-button);
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-duration);
+}
+
+.submit-button:hover {
+  background-color: var(--color-secondary);
+  transform: scale(var(--button-hover-scale));
+}
+
+.error-message {
+  color: var(--color-error);
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پنل ادمین | مشاهده رزروها</title>
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <script src="js/admin.js" defer></script>
+  </head>
+  <body>
+    <main class="admin-container">
+      <section
+        class="admin-panel"
+        id="adminPanel"
+        role="region"
+        aria-labelledby="adminPanelTitle"
+      >
+        <h1 id="adminPanelTitle">پنل ادمین - مشاهده رزروها</h1>
+        <table
+          id="reservationsTable"
+          class="reservations-table"
+          aria-describedby="adminPanelTitle"
+        >
+          <thead>
+            <tr>
+              <th>نام</th>
+              <th>نام خانوادگی</th>
+              <th>اتاق</th>
+              <th>از تاریخ</th>
+              <th>تا تاریخ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Reservations will be populated here -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سیستم رزرو اتاق | محمد حسین علی خانی</title>
+
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="سیستم رزرو اتاق محمد حسین علی خانی. به راحتی اتاق خود را در هتل ما رزرو کنید. امکانات عالی و قیمت مناسب."
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="سیستم رزرو اتاق | محمد حسین علی خانی" />
+    <meta
+      property="og:description"
+      content="سیستم رزرو اتاق محمد حسین علی خانی. به راحتی اتاق خود را در هتل ما رزرو کنید. امکانات عالی و قیمت مناسب."
+    />
+    <meta property="og:url" content="https://example.com/reservation" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="سیستم رزرو اتاق | محمد حسین علی خانی" />
+    <meta
+      name="twitter:description"
+      content="سیستم رزرو اتاق محمد حسین علی خانی. به راحتی اتاق خود را در هتل ما رزرو کنید. امکانات عالی و قیمت مناسب."
+    />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://example.com/reservation" />
+
+    <!-- JalaliDatePicker -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script
+      src="https://unpkg.com/@majidh1/jalalidatepicker/dist/jalalidatepicker.min.js"
+      defer
+    ></script>
+    <script src="./js/idGenerator.js" defer></script>
+    <script src="./js/storageUtils.js" defer></script>
+    <script src="./js/uiUtils.js" defer></script>
+    <script src="./js/datePicker.js" defer></script>
+    <script src="./js/reservationForm.js" defer></script>
+  </head>
+  <body>
+    <main class="reservation-container">
+      <!-- Reservation Form -->
+      <form
+        class="reservation-form"
+        id="reservationForm"
+        aria-labelledby="reservationFormTitle"
+      >
+        <h1 id="reservationFormTitle">رزرو اتاق</h1>
+
+        <!-- First Name Input -->
+        <div class="form-group">
+          <label for="firstName">نام</label>
+          <input
+            required
+            autofocus
+            type="text"
+            id="firstName"
+            name="firstName"
+            aria-label="نام"
+            autocomplete="off"
+            placeholder="نام خود را وارد کنید"
+          />
+        </div>
+
+        <!-- Last Name Input -->
+        <div class="form-group">
+          <label for="lastName">نام خانوادگی</label>
+          <input
+            required
+            type="text"
+            id="lastName"
+            name="lastName"
+            aria-label="نام خانوادگی"
+            autocomplete="off"
+            placeholder="نام خانوادگی خود را وارد کنید"
+          />
+        </div>
+
+        <!-- Room Selection -->
+        <div class="form-group">
+          <label for="roomSelection">انتخاب اتاق</label>
+          <select
+            required
+            id="roomSelection"
+            name="roomSelection"
+            aria-label="انتخاب اتاق"
+          >
+            <option value="" selected disabled>
+              شماره اتاق را انتخاب کنید
+            </option>
+            <option value="1">اتاق 1</option>
+            <option value="2">اتاق 2</option>
+            <option value="3">اتاق 3</option>
+            <option value="4">اتاق 4</option>
+            <option value="5">اتاق 5</option>
+            <option value="6">اتاق 6</option>
+            <option value="7">اتاق 7</option>
+            <option value="8">اتاق 8</option>
+            <option value="9">اتاق 9</option>
+            <option value="10">اتاق 10</option>
+          </select>
+        </div>
+
+        <!-- Date Picker -->
+        <div class="form-group">
+          <label for="startDate">از</label>
+          <input
+            data-jdp
+            required
+            id="startDate"
+            name="startDate"
+            aria-label="تاریخ شروع"
+            autocomplete="off"
+            placeholder="از تاریخ"
+            data-jdp-min-date="today"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="endDate">تا</label>
+          <input
+            data-jdp
+            required
+            id="endDate"
+            name="endDate"
+            aria-label="تاریخ پایان"
+            autocomplete="off"
+            placeholder="تا تاریخ"
+            data-jdp-min-date="today"
+            data-jdp-max-date="1403/04/30"
+          />
+        </div>
+
+        <button type="submit" class="submit-button" aria-label="رزرو">
+          رزرو
+        </button>
+      </form>
+
+      <!-- Receipt -->
+      <aside
+        class="reservation-receipt"
+        id="reservationReceipt"
+        aria-labelledby="reservationReceiptTitle"
+      >
+        <h2 id="reservationReceiptTitle">رسید</h2>
+        <p class="receipt-text" id="receiptText">
+          لطفا از طریق فرم سمت راست رزرو را انجام دهید!
+        </p>
+      </aside>
+    </main>
+  </body>
+</html>

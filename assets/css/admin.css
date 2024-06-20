@@ -1,0 +1,71 @@
+:root {
+  --font-size-base: 62.5%;
+  --font-family-base: "Arial", sans-serif;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #4caf50;
+  --color-secondary: #ff9800;
+  --color-error: #f44336;
+  --transition-duration: 200ms;
+  --border-radius: 0.5rem;
+  --font-size-h1: 3rem;
+  --font-size-table: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-family: var(--font-family-base);
+}
+
+.admin-container {
+  width: 90%;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reservations-table th,
+.reservations-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: var(--font-size-table);
+}
+
+.reservations-table th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.reservations-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
